@@ -1,8 +1,6 @@
 import ServiceProvider from "../models/ServiceProvider.js";
 
-// @desc Admin adds a service provider
-// @route POST /api/service-providers
-// @access Private (admin)
+
 export const addServiceProvider = async (req, res) => {
   try {
     const { name, contact, category } = req.body;
@@ -23,9 +21,7 @@ export const addServiceProvider = async (req, res) => {
   }
 };
 
-// @desc Get all service providers
-// @route GET /api/service-providers
-// @access Private (all users)
+
 export const getServiceProviders = async (req, res) => {
   try {
     const providers = await ServiceProvider.find().sort({ createdAt: -1 });
@@ -35,9 +31,7 @@ export const getServiceProviders = async (req, res) => {
   }
 };
 
-// @desc Admin deletes a service provider
-// @route DELETE /api/service-providers/:id
-// @access Private (admin)
+
 export const deleteServiceProvider = async (req, res) => {
   try {
     const provider = await ServiceProvider.findById(req.params.id);

@@ -16,8 +16,8 @@ dotenv.config();
 connectDB();
 
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('✅ Local MongoDB Connected'))
-  .catch(err => console.log('❌ DB Connection Error:', err));
+  .then(() => console.log('Local MongoDB Connected'))
+  .catch(err => console.log('DB Connection Error:', err));
 
 
 const app = express();

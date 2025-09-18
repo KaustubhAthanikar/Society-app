@@ -1,8 +1,6 @@
 import Parcel from "../models/Parcel.js";
 
-// @desc Guard logs a new parcel
-// @route POST /api/parcels
-// @access Private (guard)
+
 export const createParcel = async (req, res) => {
   try {
     const { residentId, parcelDetails } = req.body;
@@ -24,9 +22,7 @@ export const createParcel = async (req, res) => {
   }
 };
 
-// @desc Resident views their parcels
-// @route GET /api/parcels/my
-// @access Private (resident)
+
 export const getMyParcels = async (req, res) => {
   try {
     const parcels = await Parcel.find({ residentId: req.user._id }).sort({ createdAt: -1 });
@@ -36,9 +32,7 @@ export const getMyParcels = async (req, res) => {
   }
 };
 
-// @desc Resident marks parcel as collected
-// @route PUT /api/parcels/:id/collect
-// @access Private (resident)
+
 export const collectParcel = async (req, res) => {
   try {
     const parcel = await Parcel.findById(req.params.id);
@@ -57,9 +51,7 @@ export const collectParcel = async (req, res) => {
   }
 };
 
-// @desc Guard views all pending parcels
-// @route GET /api/parcels/pending
-// @access Private (guard)
+
 export const getPendingParcels = async (req, res) => {
   try {
     const parcels = await Parcel.find({ status: "pending" })

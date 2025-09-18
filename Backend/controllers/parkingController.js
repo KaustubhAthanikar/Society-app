@@ -1,8 +1,5 @@
 import Parking from "../models/Parking.js";
 
-// @desc Resident requests a parking slot
-// @route POST /api/parking
-// @access Private (resident)
 export const requestParking = async (req, res) => {
   try {
     const { slotNumber } = req.body;
@@ -19,9 +16,7 @@ export const requestParking = async (req, res) => {
   }
 };
 
-// @desc Resident views own parking requests
-// @route GET /api/parking/my
-// @access Private (resident)
+
 export const getMyParking = async (req, res) => {
   try {
     const requests = await Parking.find({ residentId: req.user._id }).sort({ createdAt: -1 });
@@ -31,9 +26,7 @@ export const getMyParking = async (req, res) => {
   }
 };
 
-// @desc Admin views all pending parking requests
-// @route GET /api/parking/pending
-// @access Private (admin)
+
 export const getPendingParking = async (req, res) => {
   try {
     const requests = await Parking.find({ requestStatus: "pending" })
@@ -45,9 +38,7 @@ export const getPendingParking = async (req, res) => {
   }
 };
 
-// @desc Admin approves or rejects a parking request
-// @route PUT /api/parking/:id
-// @access Private (admin)
+
 export const updateParkingStatus = async (req, res) => {
   try {
     const { requestStatus, slotNumber } = req.body; // approve/reject & optional slotNumber

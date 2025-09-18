@@ -1,8 +1,6 @@
 import Maintenance from "../models/Maintenance.js";
 
-// @desc Create a new maintenance bill (Admin)
-// @route POST /api/maintenance
-// @access Private (admin)
+
 export const createMaintenance = async (req, res) => {
   try {
     const { residentId, month, amount, dueDate } = req.body;
@@ -23,9 +21,7 @@ export const createMaintenance = async (req, res) => {
   }
 };
 
-// @desc Get all maintenance bills (Admin)
-// @route GET /api/maintenance
-// @access Private (admin)
+
 export const getAllMaintenance = async (req, res) => {
   try {
     const bills = await Maintenance.find()
@@ -37,9 +33,7 @@ export const getAllMaintenance = async (req, res) => {
   }
 };
 
-// @desc Get maintenance bills of logged-in resident
-// @route GET /api/maintenance/my
-// @access Private (resident)
+
 export const getMyMaintenance = async (req, res) => {
   try {
     const bills = await Maintenance.find({ residentId: req.user._id }).sort({ createdAt: -1 });
@@ -49,9 +43,7 @@ export const getMyMaintenance = async (req, res) => {
   }
 };
 
-// @desc Mark bill as paid (Resident)
-// @route PUT /api/maintenance/:id/pay
-// @access Private (resident)
+
 export const payMaintenance = async (req, res) => {
   try {
     const bill = await Maintenance.findById(req.params.id);
@@ -68,9 +60,7 @@ export const payMaintenance = async (req, res) => {
   }
 };
 
-// @desc Update a maintenance bill (Admin)
-// @route PUT /api/maintenance/:id
-// @access Private (admin)
+
 export const updateMaintenance = async (req, res) => {
   try {
     const bill = await Maintenance.findById(req.params.id);

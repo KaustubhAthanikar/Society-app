@@ -1,8 +1,6 @@
 import Notice from "../models/Notice.js";
 
-// @desc Create a new notice (Admin)
-// @route POST /api/notices
-// @access Private (admin)
+
 export const createNotice = async (req, res) => {
   try {
     const { title, message, expiryDate } = req.body;
@@ -24,9 +22,7 @@ export const createNotice = async (req, res) => {
   }
 };
 
-// @desc Get all active notices
-// @route GET /api/notices
-// @access Private (all users)
+
 export const getNotices = async (req, res) => {
   try {
     const now = new Date();
@@ -43,9 +39,7 @@ export const getNotices = async (req, res) => {
   }
 };
 
-// @desc Delete a notice (Admin)
-// @route DELETE /api/notices/:id
-// @access Private (admin)
+
 export const deleteNotice = async (req, res) => {
   try {
     const notice = await Notice.findById(req.params.id);
