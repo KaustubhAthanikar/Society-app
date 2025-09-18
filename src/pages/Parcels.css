@@ -1,0 +1,74 @@
+.parcels-page {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+.parcels-page h3 {
+  color: #1a237e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.parcel-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.parcel-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s;
+}
+
+.parcel-card:hover {
+  transform: scale(1.02);
+}
+
+.parcel-card div {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.uncollected {
+  color: red;
+  font-weight: bold;
+}
+
+.collected {
+  color: green;
+  font-weight: bold;
+}
+
+.collect-btn {
+  padding: 8px 12px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.collect-btn:hover {
+  background-color: #3949ab;
+  transform: scale(1.05);
+}
+
+.info {
+  text-align: center;
+  color: #444;
+  font-size: 15px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 15px;
+}

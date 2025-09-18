@@ -1,0 +1,37 @@
+.dashboard-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.dashboard-container h1 {
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.dashboard-container p {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.dashboard-card {
+  background-color: #1a237e;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.05);
+  background-color: #3949ab;
+}

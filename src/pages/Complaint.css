@@ -1,0 +1,115 @@
+/* complaints.css - scoped to .page */
+
+.page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.page h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form styling */
+.page .form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.page .form input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.page .form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.page .form button:hover {
+  background-color: #45a049;
+}
+
+/* Admin table styling */
+.page table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.page thead th {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.page tbody tr {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+.page tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.page tbody td {
+  padding: 12px 15px;
+}
+
+.page select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.page select:hover {
+  border-color: #4CAF50;
+}
+
+.page select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* User complaints list styling */
+.page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page ul li {
+  background-color: #fff;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.page ul li strong {
+  display: block;
+  margin-bottom: 5px;
+}
