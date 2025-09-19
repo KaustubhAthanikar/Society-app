@@ -20,7 +20,7 @@ const visitorSchema = new mongoose.Schema({
   checkInTime: { type: Date },
   checkOutTime: { type: Date },
 
-  // ✅ NEW: Guard Logs
+  // NEW: Guard Logs
   logs: [
     {
       guardId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
