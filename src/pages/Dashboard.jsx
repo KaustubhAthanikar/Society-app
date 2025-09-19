@@ -7,7 +7,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
-      <h1>Welcome, {user?.name || "Resident"} 👋</h1>
+      <h1>Welcome, {user?.name || "Resident"} </h1>
       <p>Select an option below:</p>
 
       <div className="dashboard-grid">

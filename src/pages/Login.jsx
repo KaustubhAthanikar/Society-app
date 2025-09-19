@@ -11,7 +11,7 @@ function Login() {
 
   const navigate = useNavigate();
 
-  // 🚀 If already logged in, redirect to dashboard
+  //  If already logged in, redirect to dashboard
   useEffect(() => {
     if (localStorage.getItem("token")) {
       navigate("/dashboard");

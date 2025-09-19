@@ -23,7 +23,7 @@ function Visitor() {
 
   const role = localStorage.getItem("role");
 
-  // ---------------- Resident: Create Visitor ----------------
+  //Resident: Create Visitor
   const handleVisitorChange = (e) =>
     setVisitorForm({ ...visitorForm, [e.target.name]: e.target.value });
 
@@ -56,7 +56,7 @@ function Visitor() {
     link.click();
   };
 
-  // ---------------- Guard: Scan & Verify ----------------
+  //  Guard: Scan & Verify
   useEffect(() => {
     if (role !== "guard" || scannerRef.current) return;
 
@@ -87,7 +87,7 @@ function Visitor() {
     }
   };
 
-  // ---------------- Admin: Fetch All Visitors ----------------
+  // Admin: Fetch All Visitors 
   const fetchAllVisitors = async () => {
     try {
       const res = await API.get("/visitors/all"); // backend route for admins
