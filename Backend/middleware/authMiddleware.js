@@ -1,6 +1,5 @@
 import jwt from "jsonwebtoken";
-import User from "../models/user.js"; // Capitalized for convention
-
+import User from "../models/user.js"; 
 // Protect: Check if user is logged in
 export const protect = async (req, res, next) => {
   let token;
